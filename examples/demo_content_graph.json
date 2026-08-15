@@ -1,0 +1,91 @@
+{
+  "title": "Transformer 与注意力机制：深度学习的一次范式转移",
+  "subtitle": "从自注意力到大规模预训练语言模型",
+  "genre": "学术科普",
+  "sections": [
+    {
+      "id": "s1",
+      "title": "为什么需要注意力",
+      "key_points": [
+        "RNN 按顺序处理序列，难以并行，长距离依赖易丢失",
+        "注意力机制让每个位置直接看到序列中所有其他位置",
+        "2017 年《Attention Is All You Need》提出 Transformer",
+        "自此深度学习进入并行、可扩展的新范式"
+      ],
+      "concepts": ["序列建模", "并行计算", "长距离依赖", "自注意力"],
+      "takeaway": "注意力让每个词直接关联整个句子，而不是一步一步往前传"
+    },
+    {
+      "id": "s2",
+      "title": "自注意力怎么算",
+      "key_points": [
+        "每个 token 生成 Query、Key、Value 三个向量",
+        "Q 与 K 的点积衡量相关性，softmax 归一化成权重",
+        "权重加权 V，得到该 token 的上下文表示",
+        "多头注意力在不同子空间捕捉不同关系"
+      ],
+      "concepts": ["QKV", "缩放点积", "softmax", "多头注意力"],
+      "tables": [
+        {
+          "caption": "自注意力计算流程",
+          "columns": ["步骤", "作用"],
+          "rows": [
+            ["投影 Q/K/V", "把输入映射到三个表示空间"],
+            ["Q·Kᵀ / √d", "缩放点积，避免 softmax 饱和"],
+            ["softmax", "归一化成注意力权重"],
+            ["权重 × V", "加权求和得到输出"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "从 Transformer 到大模型",
+      "key_points": [
+        "Encoder-Decoder 骨架被拆解复用：BERT 用 Encoder，GPT 用 Decoder",
+        "预训练 + 微调范式取代了逐任务定制",
+        "规模扩大带来涌现能力：理解、生成、推理",
+        "2024-2026 年已进入多模态、Agent 时代"
+      ],
+      "concepts": ["预训练", "微调", "涌现能力", "多模态"],
+      "timeline": [
+        {"stage": "2017 Transformer 提出", "desc": "Attention Is All You Need"},
+        {"stage": "2018 BERT/GPT", "desc": "预训练语言模型爆发"},
+        {"stage": "2020 GPT-3", "desc": "规模法则，少样本学习"},
+        {"stage": "2024-2026", "desc": "多模态、Agent、原生推理"}
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "意义与代价",
+      "key_points": [
+        "统一了 NLP/CV/语音的建模范式",
+        "计算与数据的需求急剧上升",
+        "能耗、可解释性、幻觉仍是开放问题"
+      ],
+      "concepts": ["范式统一", "计算成本", "可解释性"],
+      "takeaway": "注意力机制不只是方法，更是一种‘让模型自己决定看哪里’的思维方式"
+    }
+  ],
+  "comparisons": [
+    {
+      "caption": "RNN vs Transformer",
+      "rows": [
+        {"name": "并行性", "values": ["顺序处理，无法并行", "全序列并行"], "verdict": "Transformer 优"},
+        {"name": "长距离依赖", "values": ["易丢失", "直接建模"], "verdict": "Transformer 优"},
+        {"name": "计算开销", "values": ["随长度线性", "随长度平方"], "verdict": "RNN 优"}
+      ]
+    }
+  ],
+  "timeline": [
+    {"stage": "2017", "desc": "Transformer 提出"},
+    {"stage": "2018", "desc": "BERT / GPT 预训练时代"},
+    {"stage": "2020", "desc": "GPT-3 规模法则"},
+    {"stage": "2024-2026", "desc": "多模态与 Agent"}
+  ],
+  "takeaways": [
+    "注意力机制解决的是‘让序列中的每个位置都能直接联系所有位置’",
+    "Transformer 的统一骨架催生了预训练大模型的整个生态",
+    "它同时带来了新的问题：算力、解释性与能耗"
+  ]
+}

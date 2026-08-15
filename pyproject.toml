@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pptagent"
+version = "0.6.2"
+description = "学术 PPT 融合管线：一段文字 → 原生可编辑 PPTX（无 AI 生图，内容诚实，风格可积累）"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "qgeng1465" }]
+keywords = ["ppt", "pptx", "academic", "ai", "slide", "presentation", "svg"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Multimedia :: Graphics :: Presentation",
+]
+dependencies = [
+    "requests>=2.31",
+    "numpy>=1.24",
+    "Pillow>=10.0",
+]
+
+[project.optional-dependencies]
+preview = ["cairosvg>=2.7"]
+
+[tool.setuptools]
+packages = ["pptagent", "pptagent.design"]

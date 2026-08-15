@@ -1,0 +1,297 @@
+{
+  "name": "transformer-10p",
+  "approved": false,
+  "added": "",
+  "meta": {
+    "genre": "学术科普",
+    "topic_keywords": [
+      "Transformer",
+      "注意力机制",
+      "自注意力",
+      "深度学习",
+      "NLP",
+      "Encoder-Decoder"
+    ],
+    "pages": 10,
+    "layout_signature": {
+      "compare": 1,
+      "content": 1,
+      "cover": 1,
+      "mindmap": 1,
+      "overview": 1,
+      "quote": 1,
+      "table": 1,
+      "takeaway": 1,
+      "timeline": 1,
+      "two_col": 1
+    },
+    "style_notes": [],
+    "user_notes": "基线示例：10页学术科普，配色 academic 深蓝+琥珀，表格/思维导图/时间轴全覆盖。尚未经用户打磨，仅作风格参考。"
+  },
+  "deck_plan": {
+    "slide_size": "16:9",
+    "deck_title": "demo_transformer",
+    "theme": "academic",
+    "slides": [
+      {
+        "id": "slide_01",
+        "layout": "cover",
+        "title": "注意力机制与 Transformer：从原理到应用",
+        "kicker": "",
+        "accent": "primary",
+        "content": {
+          "subtitle": "一个给 AI 生成 PPT 的管线演示 —— 无 AI 生图，表格 / 思维导图 / 阴影均为真实矢量元素",
+          "headline": "学术科普 · 15 分钟 · 融合管线 v0.1",
+          "meta": "fused-pipeline · 2026-08-04 · 示例 Deck（非真实内容）"
+        }
+      },
+      {
+        "id": "slide_02",
+        "layout": "overview",
+        "title": "本讲提纲",
+        "kicker": "OVERVIEW · 01",
+        "content": {
+          "items": [
+            "背景：序列建模的痛点",
+            "注意力机制：核心思想",
+            "Transformer 架构拆解",
+            "训练与扩展的工程现实",
+            "局限性与开放问题",
+            "结语：对科学传播的启示"
+          ]
+        }
+      },
+      {
+        "id": "slide_03",
+        "layout": "content",
+        "title": "背景：为什么需要注意力",
+        "kicker": "BACKGROUND · 02",
+        "content": {
+          "intro": "循环神经网络按顺序读取输入，长距离依赖成为瓶颈；注意力让模型直接“看见”全部输入。",
+          "points": [
+            {
+              "lead": "序列建模的瓶颈",
+              "body": "RNN 梯度随长度衰减，长距离依赖难以建模；并行的缺失限制训练吞吐。"
+            },
+            {
+              "lead": "注意力直接建立联系",
+              "body": "每个位置对所有位置打分，一步之内建立全序列依赖，无需递归传递。"
+            },
+            {
+              "lead": "可并行化的关键",
+              "body": "注意力没有顺序依赖，矩阵化后可在 GPU 上充分并行，训练效率大幅提升。"
+            },
+            {
+              "lead": "从翻译到通用骨干",
+              "body": "2017 年《Attention Is All You Need》提出后，成为 NLP 乃至多模态的通用主干。"
+            }
+          ],
+          "footnote": "来源：Vaswani et al., NeurIPS 2017"
+        }
+      },
+      {
+        "id": "slide_04",
+        "layout": "two_col",
+        "title": "两种范式对比：RNN vs Transformer",
+        "kicker": "BACKGROUND · 02",
+        "content": {
+          "col_a": {
+            "heading": "RNN / LSTM（旧范式）",
+            "bullets": [
+              "顺序处理，第 t 步依赖前 t-1 步",
+              "长序列梯度消失，难以记忆",
+              "训练难以并行，吞吐受限",
+              "适合流式/在线场景",
+              "参数规模到一定量级后扩展边际变差"
+            ]
+          },
+          "col_b": {
+            "heading": "Transformer（新范式）",
+            "bullets": [
+              "一步看到全序列，任意两位置直接相连",
+              "自注意力 + 位置编码，无需递归",
+              "矩阵运算高度可并行，吃满 GPU",
+              "适合离线预训练 + 下游微调",
+              "规模法则下持续受益于更多算力与数据"
+            ]
+          }
+        }
+      },
+      {
+        "id": "slide_05",
+        "layout": "table",
+        "title": "三种主流注意力机制",
+        "kicker": "MECHANISM · 03",
+        "content": {
+          "caption": "注意力机制的三种实现，权衡记忆复杂度与表达力（示例数据）",
+          "columns": [
+            "机制",
+            "记忆复杂度",
+            "表达能力",
+            "代表应用"
+          ],
+          "rows": [
+            [
+              "全量自注意力",
+              "O(n²)",
+              "全局依赖，最强",
+              "标准 Transformer"
+            ],
+            [
+              "稀疏注意力",
+              "O(n·k)",
+              "局部+部分全局",
+              "Longformer"
+            ],
+            [
+              "线性注意力",
+              "O(n)",
+              "依赖简化",
+              "高效推理"
+            ]
+          ],
+          "highlight_row": 0,
+          "footnote": "注：n 为序列长度，k 为窗口/跨度。示例值，非逐字引用。"
+        }
+      },
+      {
+        "id": "slide_06",
+        "layout": "compare",
+        "title": "训练成本与推理的权衡",
+        "kicker": "ENGINEERING · 04",
+        "content": {
+          "dimensions": [
+            {
+              "name": "参数量",
+              "a": "百亿~万亿级",
+              "b": "十亿级以下",
+              "better": "b"
+            },
+            {
+              "name": "训练算力",
+              "a": "数千 GPU·月",
+              "b": "单卡即可",
+              "better": "b"
+            },
+            {
+              "name": "长文能力",
+              "a": "百万 token",
+              "b": "受窗口限制",
+              "better": "a"
+            },
+            {
+              "name": "部署成本",
+              "a": "多卡推理",
+              "b": "可端侧运行",
+              "better": "b"
+            },
+            {
+              "name": "多步推理",
+              "a": "能力强",
+              "b": "较弱",
+              "better": "a"
+            }
+          ]
+        }
+      },
+      {
+        "id": "slide_07",
+        "layout": "mindmap",
+        "title": "Transformer 的知识地图",
+        "kicker": "MAP · 05",
+        "content": {
+          "center": "Transformer",
+          "branches": [
+            {
+              "name": "注意力",
+              "children": [
+                "缩放点积",
+                "多头",
+                "因果掩码"
+              ]
+            },
+            {
+              "name": "位置编码",
+              "children": [
+                "正弦",
+                "可学习",
+                "RoPE"
+              ]
+            },
+            {
+              "name": "前馈网络",
+              "children": [
+                "GELU",
+                "MoE 扩展"
+              ]
+            },
+            {
+              "name": "归一化",
+              "children": [
+                "LayerNorm",
+                "Pre-LN",
+                "RMSNorm"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "slide_08",
+        "layout": "timeline",
+        "title": "从论文到生态的演进",
+        "kicker": "TIMELINE · 06",
+        "content": {
+          "stages": [
+            {
+              "stage": "2017",
+              "desc": "Attention Is All You Need"
+            },
+            {
+              "stage": "2018",
+              "desc": "GPT / BERT 预训练范式"
+            },
+            {
+              "stage": "2020",
+              "desc": "GPT-3 规模法则，few-shot"
+            },
+            {
+              "stage": "2022",
+              "desc": "ChatGPT 对话式交互"
+            },
+            {
+              "stage": "2024+",
+              "desc": "多模态、长上下文、推理"
+            }
+          ]
+        }
+      },
+      {
+        "id": "slide_09",
+        "layout": "quote",
+        "title": "关键洞察",
+        "kicker": "INSIGHT · 07",
+        "accent": "accent",
+        "content": {
+          "text": "注意力机制的力量不在单一技巧，而在于它把“全局对齐”变成了可并行、可扩展、可学习的基础操作。",
+          "source": "管线示例页 · 观点"
+        }
+      },
+      {
+        "id": "slide_10",
+        "layout": "takeaway",
+        "title": "结语与启示",
+        "kicker": "TAKEAWAY · 08",
+        "content": {
+          "points": [
+            "注意力 = 可并行化的全局依赖",
+            "规模法则让“更多算力+数据”持续有效",
+            "推理成本与能力仍是一对核心矛盾",
+            "对科普：用“几何/表格/图谱”替代图片，信息密度更高"
+          ],
+          "closing": "感谢聆听 · 示例 Deck 由融合管线 v0.1 生成"
+        }
+      }
+    ]
+  }
+}

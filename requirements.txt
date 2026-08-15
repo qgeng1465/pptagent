@@ -1,0 +1,10 @@
+# pptagent 运行时依赖
+#  - requests:    可插拔 LLM 大脑（llm.py / autopilot.py）
+#  - numpy, Pillow: 像素级 QA（pixel_qa.py）
+#  - cairosvg:    预览渲染（render_preview.py，可选，但推荐）
+# PPTX 转换引擎（ppt-master）依赖 python-pptx + lxml，见 docs/ENGINE.md
+
+requests>=2.31
+numpy>=1.24
+Pillow>=10.0
+cairosvg>=2.7

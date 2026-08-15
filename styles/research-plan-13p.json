@@ -1,0 +1,498 @@
+{
+  "name": "research-plan-13p",
+  "approved": false,
+  "added": "",
+  "meta": {
+    "genre": "研究计划",
+    "topic_keywords": [
+      "基金申报",
+      "研究计划",
+      "技术路线",
+      "钙钛矿",
+      "新能源",
+      "材料工程"
+    ],
+    "pages": 13,
+    "layout_signature": {
+      "chart_table": 1,
+      "compare": 1,
+      "cover": 1,
+      "fig_points": 1,
+      "fig_table_text": 1,
+      "overview": 1,
+      "profile": 1,
+      "research": 1,
+      "route": 1,
+      "section": 2,
+      "takeaway": 1,
+      "timeline": 1
+    },
+    "style_notes": [],
+    "user_notes": "基金申报/研究计划版式基准（示例内容为虚构，仅演示版式）：图留空占位+原生图表+图文表三件套+路线图分层闭环+时间轴，经专家评审打磨的 13 页结构。"
+  },
+  "deck_plan": {
+    "slide_size": "16:9",
+    "deck_title": "钙钛矿太阳能电池的稳定性提升研究",
+    "theme": "academic",
+    "footer": "研究计划 · 示例 Deck（虚构内容）",
+    "slides": [
+      {
+        "id": "slide_01",
+        "layout": "cover",
+        "title": "钙钛矿太阳能电池的稳定性提升研究",
+        "kicker": "研究计划汇报 · RESEARCH PLAN",
+        "accent": "primary",
+        "content": {
+          "subtitle": "缺陷钝化 · 界面工程 · 加速老化评价",
+          "headline": "面向长期服役的钙钛矿器件稳定性提升策略",
+          "meta": "汇报人 · ××（待填）\n××大学 ××学院\n2026.8（示例日期）"
+        }
+      },
+      {
+        "id": "slide_02",
+        "layout": "profile",
+        "title": "汇报人简介",
+        "kicker": "PROFILE",
+        "accent": "primary",
+        "content": {
+          "name": "××（待填）",
+          "title": "××方向",
+          "affil": "××大学 ××课题组（待填）",
+          "tags": [
+            "新能源材料",
+            "薄膜器件",
+            "界面工程"
+          ],
+          "stats": [
+            {
+              "num": "×",
+              "label": "一作/共同一作论文"
+            },
+            {
+              "num": "×",
+              "label": "参与科研项目"
+            },
+            {
+              "num": "×",
+              "label": "授权专利"
+            },
+            {
+              "num": "×",
+              "label": "学术引用"
+            }
+          ],
+          "figures": [
+            {
+              "slot": "bottom",
+              "label": "图 1",
+              "caption": "个人主页 / 学术成果页占位",
+              "want_chart": ""
+            }
+          ]
+        }
+      },
+      {
+        "id": "slide_03",
+        "layout": "overview",
+        "title": "研究内容概览",
+        "kicker": "OVERVIEW",
+        "accent": "primary",
+        "content": {
+          "items": [
+            {
+              "part": "01",
+              "title": "研究背景与科学问题",
+              "desc": "稳定性是钙钛矿器件产业化的首要瓶颈"
+            },
+            {
+              "part": "02",
+              "title": "研究内容一 · 缺陷钝化",
+              "desc": "晶界/表面缺陷 → 非辐射复合与离子迁移"
+            },
+            {
+              "part": "03",
+              "title": "研究内容二 · 界面工程",
+              "desc": "传输层界面 → 电荷抽取与湿度阻隔"
+            },
+            {
+              "part": "04",
+              "title": "技术路线与筛选方案",
+              "desc": "配方 → 器件 → 老化评价三层递进"
+            },
+            {
+              "part": "05",
+              "title": "初步效率数据",
+              "desc": "原生柱状图 + 数据表，钝化剂量效应"
+            },
+            {
+              "part": "06",
+              "title": "时间轴与预期成果",
+              "desc": "配方-器件-老化 12 周时间轴"
+            }
+          ]
+        }
+      },
+      {
+        "id": "slide_04",
+        "layout": "section",
+        "title": "研究背景与科学问题",
+        "kicker": "PART 01 · 背景",
+        "accent": "primary",
+        "content": {
+          "index": "01",
+          "total": 3,
+          "desc": "钙钛矿器件效率已接近硅基，但热/湿/光下的长期稳定性不足是产业化首因；亟需兼顾效率与寿命的稳定性提升策略。"
+        }
+      },
+      {
+        "id": "slide_05",
+        "layout": "fig_points",
+        "title": "研究背景：稳定性瓶颈",
+        "kicker": "背景 · 01",
+        "accent": "primary",
+        "content": {
+          "points": [
+            {
+              "lead": "效率已接近硅基",
+              "body": "单结效率屡创新高，接近 Shockley-Queisser 上限",
+              "bar": "primary"
+            },
+            {
+              "lead": "热失稳",
+              "body": "高温下离子迁移加剧，相分离与缺陷增殖",
+              "bar": "primary"
+            },
+            {
+              "lead": "湿气侵蚀",
+              "body": "水分子插入晶格，快速分解为卤化物",
+              "bar": "primary"
+            },
+            {
+              "lead": "光诱导衰减",
+              "body": "光照下缺陷态与非辐射复合增加",
+              "bar": "primary"
+            },
+            {
+              "lead": "本课题对策",
+              "body": "缺陷钝化 + 界面工程 + 加速老化评价",
+              "bar": "accent"
+            }
+          ],
+          "figures": [
+            {
+              "slot": "top",
+              "label": "图 1",
+              "caption": "器件结构 / 衰减机制示意图（留空占位）",
+              "want_chart": ""
+            }
+          ],
+          "footnote": "图 1 留空：后续贴器件结构示意图"
+        }
+      },
+      {
+        "id": "slide_06",
+        "layout": "fig_table_text",
+        "title": "研究内容一 · 缺陷钝化配方与质控",
+        "kicker": "内容一 · 钝化",
+        "accent": "primary",
+        "content": {
+          "intro": "在钙钛矿前驱体/表面引入钝化剂，抑制缺陷与非辐射复合，兼顾效率与稳定性。",
+          "points": [
+            {
+              "lead": "钝化剂筛选",
+              "body": "分子构型 → 结合能计算 → 实验验证"
+            },
+            {
+              "lead": "掺入方式",
+              "body": "前驱体掺杂 / 表面后处理 / 双策略"
+            },
+            {
+              "lead": "表征确认",
+              "body": "PL/TRPL 提升，缺陷密度降低"
+            }
+          ],
+          "caption": "钝化效果表征 · 四项必做",
+          "columns": [
+            "指标",
+            "检测方法",
+            "判据"
+          ],
+          "rows": [
+            [
+              "载流子寿命",
+              "TRPL",
+              "τ 提升 ≥30%"
+            ],
+            [
+              "缺陷密度",
+              "DLTS",
+              "下降一个量级"
+            ],
+            [
+              "结晶质量",
+              "XRD/SEM",
+              "晶粒更大更致密"
+            ],
+            [
+              "稳定性",
+              "加速老化",
+              "衰减率降低"
+            ]
+          ],
+          "highlight_row": 0,
+          "figures": [
+            {
+              "slot": "left",
+              "label": "图 1",
+              "caption": "钝化策略示意图（留空占位）",
+              "want_chart": ""
+            }
+          ],
+          "footnote": "图 1 留空：后续贴分子构型 / 表征图谱"
+        }
+      },
+      {
+        "id": "slide_07",
+        "layout": "research",
+        "title": "研究内容 · 三个递进层次",
+        "kicker": "内容 · 方案",
+        "accent": "primary",
+        "content": {
+          "objective": "构建\"缺陷钝化 + 界面工程 + 加速老化评价\"三位一体的稳定性提升体系。",
+          "columns": [
+            {
+              "phase": "配方层",
+              "items": [
+                "钝化剂构效筛选",
+                "掺入方式优化",
+                "批次稳定性"
+              ]
+            },
+            {
+              "phase": "器件层",
+              "items": [
+                "传输层界面改性",
+                "全器件集成",
+                "效率-寿命双指标"
+              ]
+            },
+            {
+              "phase": "评价层",
+              "items": [
+                "加速老化协议",
+                "衰减机理诊断",
+                "寿命外推模型"
+              ]
+            }
+          ],
+          "figures": [
+            {
+              "slot": "bottom",
+              "label": "图 1",
+              "caption": "器件层叠结构 / 传输层界面参考图",
+              "want_chart": "perovskite solar cell stack structure diagram"
+            }
+          ],
+          "footnote": "图 1 联网拉取开放版权参考图；失败自动回落为图留空占位"
+        }
+      },
+      {
+        "id": "slide_08",
+        "layout": "route",
+        "title": "技术路线：科学问题 → 研究方案 → 预期成果",
+        "kicker": "技术路线",
+        "accent": "primary",
+        "content": {
+          "columns": [
+            {
+              "phase": "关键科学问题",
+              "items": [
+                "缺陷态如何影响长期衰减",
+                "界面如何限域离子迁移",
+                "加速老化如何外推真实寿命"
+              ]
+            },
+            {
+              "phase": "研究方案",
+              "items": [
+                "钝化剂构效筛选",
+                "界面改性优化",
+                "A/B/C 配方对比"
+              ]
+            },
+            {
+              "phase": "预期成果",
+              "items": [
+                "效率 ≥25% 且寿命提升 2 倍",
+                "12 周完整时间线",
+                "论文 1-2 篇 + 方法专利"
+              ]
+            }
+          ],
+          "footnote": "技术路线图 · 科学问题→研究方案→预期成果 闭环"
+        }
+      },
+      {
+        "id": "slide_09",
+        "layout": "section",
+        "title": "研究方案与初步数据",
+        "kicker": "PART 02 · 方案",
+        "accent": "primary",
+        "content": {
+          "index": "02",
+          "total": 3,
+          "desc": "配方-器件-老化三层方案 + 效率数据 + 配方对比设计。"
+        }
+      },
+      {
+        "id": "slide_10",
+        "layout": "chart_table",
+        "title": "效率可调：钝化剂量效应（原生图表）",
+        "kicker": "方案 · 数据",
+        "accent": "primary",
+        "content": {
+          "chart_title": "光电转换效率随钝化剂浓度变化",
+          "data": [
+            [
+              "对照组",
+              22.1,
+              "基线"
+            ],
+            [
+              "+0.1%",
+              24.3,
+              "最优"
+            ],
+            [
+              "+0.2%",
+              23.8,
+              ""
+            ],
+            [
+              "+0.5%",
+              22.6,
+              "过钝化"
+            ]
+          ],
+          "target": 25.0,
+          "highlight": 1,
+          "unit": "%",
+          "caption": "光电转换效率（%）· 示例数据，仅演示版式",
+          "columns": [
+            "配方",
+            "效率 (%)",
+            "备注",
+            "判据"
+          ],
+          "rows": [
+            [
+              "对照组",
+              "22.1±0.4",
+              "1.0×",
+              "基线"
+            ],
+            [
+              "+0.1%",
+              "24.3±0.3",
+              "1.10×",
+              "最优配方"
+            ],
+            [
+              "+0.2%",
+              "23.8±0.3",
+              "1.08×",
+              "持平"
+            ],
+            [
+              "+0.5%",
+              "22.6±0.4",
+              "1.02×",
+              "过钝化"
+            ]
+          ],
+          "highlight_row": 1,
+          "footnote": "示例数据（虚构），用于演示原生图表与数据表；正式数据以实验记录为准"
+        }
+      },
+      {
+        "id": "slide_11",
+        "layout": "compare",
+        "title": "老化评价方案对比",
+        "kicker": "方案 · 评价",
+        "accent": "primary",
+        "content": {
+          "dimensions": [
+            {
+              "name": "A 组 85°C/85%RH",
+              "a": "湿热加速老化",
+              "b": "严苛但偏湿主导",
+              "better": "a"
+            },
+            {
+              "name": "B 组 1-sun 光照",
+              "a": "光诱导衰减主通道",
+              "b": "与户外最相关",
+              "better": "a"
+            },
+            {
+              "name": "C 组 温度循环",
+              "a": "热应力疲劳",
+              "b": "模拟昼夜温差",
+              "better": "b"
+            },
+            {
+              "name": "判据",
+              "a": "T80 > 1000 h",
+              "b": "衰减机理可诊断",
+              "better": "a"
+            }
+          ],
+          "footnote": "多协议并行，交叉诊断衰减机理"
+        }
+      },
+      {
+        "id": "slide_12",
+        "layout": "timeline",
+        "title": "全工艺时间轴与进度",
+        "kicker": "PROGRESS",
+        "accent": "primary",
+        "content": {
+          "stages": [
+            {
+              "stage": "配方筛选",
+              "days": "第 1-3 周",
+              "desc": "钝化剂构效 + 表征确认"
+            },
+            {
+              "stage": "器件集成",
+              "days": "第 4-7 周",
+              "desc": "界面改性 + 全器件制备"
+            },
+            {
+              "stage": "老化评价",
+              "days": "第 8-12 周",
+              "desc": "加速老化 + 机理诊断"
+            }
+          ],
+          "footnote": "合计约 12 周；评价期可并行开展外推模型"
+        }
+      },
+      {
+        "id": "slide_13",
+        "layout": "takeaway",
+        "title": "预期成果与下一步",
+        "kicker": "TAKEAWAY",
+        "accent": "accent",
+        "content": {
+          "points": [
+            "缺陷钝化 + 界面工程双策略：效率与寿命兼顾",
+            "加速老化多协议交叉：衰减机理可诊断",
+            "配方 A/B/C 对比：筛选结果可量化",
+            "技术路线闭环：科学问题 → 方案 → 预期成果"
+          ],
+          "closing": "下一步：配方筛选子任务 → 器件集成阶段"
+        }
+      }
+    ]
+  }
+}

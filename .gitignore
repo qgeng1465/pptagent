@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# 运行产物（每次生成都会重建）
+exports/
+work/
+
+# 密钥与环境变量（绝不上传）
+.env
+.env.*
+*.pem
+
+# 用户模板 / 材料（含私人内容，绝不提交）
+*.pptx
+*.docx
+*.xlsx
+材料/
