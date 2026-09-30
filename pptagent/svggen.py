@@ -1241,7 +1241,7 @@ def _timeline(s: dict) -> str:
 
 def _quote(s: dict) -> str:
     pal = _pal()
-    body = _page_head(s.get("kicker", "观点"), s.get("title", "设计取舍"), s.get("accent", "accent"))
+    body = _page_head(s.get("title", "设计取舍"), s.get("kicker", "观点"), s.get("accent", "accent"))
     c = s.get("content", {})
     text = c.get("text", "")
     body += _rect(MARGIN, 230, 8, 150, fill=_c(_accent_color("accent")))

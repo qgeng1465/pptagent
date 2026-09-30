@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pptagent"
-version = "0.6.2"
+version = "0.6.3"
 description = "学术 PPT 融合管线：一段文字 → 原生可编辑 PPTX（无 AI 生图，内容诚实，风格可积累）"
 readme = "README.md"
 requires-python = ">=3.10"
